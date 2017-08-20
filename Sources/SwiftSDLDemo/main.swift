@@ -10,7 +10,7 @@ TTF.initialize()
 
 let window = try Window(title: "Image Loading", x: 100, y: 100,
                         w: 800, h: 600,
-                        flags: SDL_WINDOW_ALLOW_HIGHDPI.rawValue)
+                        flags: 0)
 
 let renderer = try Renderer(window: window)
 
@@ -34,9 +34,9 @@ while true {
   before = now;
   now = SDL_GetPerformanceCounter();
 
-  let dt = Double(now - before)*1000.0 / Double(SDL_GetPerformanceFrequency())
+  let dt = Double(now - before) / Double(SDL_GetPerformanceFrequency())
 
-  text.text = "FPS: \(dt)"
+  text.text = "FPS: \(1/dt)"
 
   renderer.color = .white
   renderer.clear()

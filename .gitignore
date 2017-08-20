@@ -2,3 +2,4 @@
 .build/
 Package.pins
 SwiftSDL.xcodeproj/
+bin/SwiftSDLDemo

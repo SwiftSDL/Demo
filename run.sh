@@ -1,1 +1,4 @@
-./bin/SwiftSDLDemo
+cd bin
+./SwiftSDLDemo
+cd ..
+
